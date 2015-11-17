@@ -1,0 +1,143 @@
+
+    <div class="panel panel-default type2">
+
+        <div class="panel-body controlsHolder">
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <div class="panel panel-default type3">
+
+        <div class="panel-body">
+
+
+            <div class="col-xs-6 stats">
+
+                <% if( data.today.heat.heating_status ){ %>
+
+                    <span class="title"><i class="fa fa-clock-o"></i> Heating on</span>
+                    <h3 class="color-up"><%- data.today.heat.history.meta.onLength_time %><small>hrs</small></h3>
+                    <span class="bottom"><%- data.today.heat.history.meta.onLength %></span>
+
+                <% }else{ %>
+
+                    <span class="title"><i class="fa fa-clock-o"></i> Heating off</span>
+                    <h3 class="color-down"><%- data.today.heat.history.meta.offLength_time %><small>hrs</small></h3>
+                    <span class="bottom"><%- data.today.heat.history.meta.offLength %></span>
+
+                <% } %>
+
+
+            </div>
+
+
+            <div class="col-xs-6 stats">
+
+                <% if( data.today.heat.heating_status ){ %>
+
+                    <span class="title"><i class="fa fa-clock-o"></i> Off at</span>
+                    <h3 class="color-down"><%- data.today.heat.nextOff_time %><small>hrs</small></h3>
+                    <span class="bottom"><%- data.today.heat.nextOff %></span>
+
+                <% }else{ %>
+
+                    <span class="title"><i class="fa fa-clock-o"></i> On at</span>
+                    <h3 class="color-up"><%- data.today.heat.nextOn_time %><small>hrs</small></h3>
+                    <span class="bottom"><%- data.today.heat.nextOn %></span>
+
+                <% } %>
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="panel panel-default type1">
+
+        <div class="panel-body">
+
+            <div class="col-xs-6 stats">
+
+                <span class="top"><i class="wi wi-thermometer"></i> Temperature</span>
+                <h3><%- data.today.heat.temperature %>&#8451;</h3>
+                <span class="bottom">Living room</span>
+
+            </div>
+
+            <div class="col-xs-6 stats">
+
+                <span class="top"><i class="wi wi-sprinkles"></i> Humidity</span>
+                <h3><%- data.today.heat.humidity %>%</h3>
+                <span class="bottom">Living room</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="panel panel-default type1">
+
+        <div class="panel-body">
+
+            <div class="col-xs-6 stats">
+
+                <span class="top"><i class="wi wi-thermometer"></i> Temperature</span>
+                <h3><%- data.today.weather.temp %>&#8451;</h3>
+                <span class="bottom">Outside</span>
+
+            </div>
+
+            <div class="col-xs-6 stats">
+
+                <span class="top"><i class="wi wi-sprinkles"></i> Humidity</span>
+                <h3><%- data.today.weather.humidity %>%</h3>
+                <span class="bottom">Outside</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="panel panel-default type3">
+
+        <div class="panel-body">
+
+
+            <div class="col-xs-6 stats">
+
+                <span class="title"><i class="wi wi-sunrise"></i> Civil start</span>
+                <h3 class=""><%- data.today.sun.civil_start %><small>hrs</small></h3>
+                <span class="bottom"><%- data.today.sun.civil_day_length_short %></span>
+
+            </div>
+
+
+            <div class="col-xs-6 stats">
+
+                <span class="title"><i class="wi wi-sunset"></i> Civil end</span>
+                <h3 class=""><%- data.today.sun.civil_end %><small>hrs</small></h3>
+                <span class="bottom"><%- data.today.sun.civil_day_length_left_short %></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="alertbottomleft" class="kode-alert kode-alert-icon kode-alert-click alert6 kode-alert-bottom-left" style="display: none;">
+
+    </div>
